@@ -30,7 +30,7 @@ async def main():
         data = await input_group("💭 Жаңа хат", [
             input(placeholder="Хат тексті ...", name="msg"),
             actions(name="cmd", buttons=["Жіберу", {'label': "Чаттан шығу", 'type': 'cancel'}])
-        ], validate = lambda m: ('msg', "стін жазыңыз!") if m["cmd"] == "Жіберу" and not m['msg'] else None)
+        ], validate = lambda m: ('msg', "Хат текстін жазыңыз!") if m["cmd"] == "Жіберу" and not m['msg'] else None)
 
         if data is None:
             break
